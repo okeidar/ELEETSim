@@ -12,12 +12,11 @@ UBaseCollisionResponseComponent::UBaseCollisionResponseComponent()
 
 }
 
-void UBaseCollisionResponseComponent::RespondToOverlap()
+void UBaseCollisionResponseComponent::RespondToHit_Implementation( AActor* HittingActor, FHitResult& Hit)
 {
+	UE_LOG(LogTemp,Warning,TEXT("I was called in the base class :("));
 }
 
-void UBaseCollisionResponseComponent::RespondToHit()
-{
-}
+
 
 

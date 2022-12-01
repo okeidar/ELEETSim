@@ -16,9 +16,7 @@ public:
 	// Sets default values for this component's properties
 	UBaseCollisionResponseComponent();
 
-	UFUNCTION(BlueprintCallable)
-	void RespondToOverlap();
-	
-	UFUNCTION(BlueprintCallable)
-	void RespondToHit();
+	UFUNCTION(BlueprintCallable,BlueprintNativeEvent)
+	void RespondToHit( AActor* HittingActor,UPARAM(ref) FHitResult& Hit);
+	virtual void RespondToHit_Implementation ( AActor* HittingActor, UPARAM(ref) FHitResult& Hit) ;
 };
