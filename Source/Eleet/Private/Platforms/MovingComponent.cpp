@@ -19,7 +19,6 @@ void UMovingComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	StartMoving();
 	bMoveBackToStart = false;
 	StartPosition = GetOwner()->GetActorLocation();
 	TargetPosition = StartPosition + TargetOffset;
